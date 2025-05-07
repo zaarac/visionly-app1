@@ -57,15 +57,16 @@ export default function VisionlyHome() {
 
   const handleDoubleVision = async () => {
     const timestamp = new Date().toLocaleString();
-const activity = await new Promise((resolve) => {
-  const choice = window.prompt("What were you doing?\n" + activities.join(" / "));
-  resolve(choice);
-});
 
-const feeling = await new Promise((resolve) => {
-  const choice = window.prompt("How did your eyes feel?\n" + feelings.join(" / "));
-  resolve(choice);
-});
+    const activity = await new Promise((resolve) => {
+      const choice = window.prompt("What were you doing?\n" + activities.join(" / "));
+      resolve(choice);
+    });
+
+    const feeling = await new Promise((resolve) => {
+      const choice = window.prompt("How did your eyes feel?\n" + feelings.join(" / "));
+      resolve(choice);
+    });
 
     const voiceNote = await startVoiceRecognition();
     const newLog = { time: timestamp, activity, feeling, voiceNote };
