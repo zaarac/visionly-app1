@@ -67,7 +67,6 @@ const feeling = await new Promise((resolve) => {
   resolve(choice);
 });
 
-
     const voiceNote = await startVoiceRecognition();
     const newLog = { time: timestamp, activity, feeling, voiceNote };
     setLogs((prevLogs) => [...prevLogs, newLog]);
