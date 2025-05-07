@@ -83,13 +83,13 @@ export default function VisionlyHome() {
 
       <div className="bg-white text-black p-4 rounded-2xl shadow-md w-72 mb-6">
         <h2 className="text-lg font-semibold mb-2">Stars Earned</h2>
-        <div className="flex justify-center gap-2 mb-4">
-          {[...Array(3)].map((_, i) => (
-            <span key={i} className={\`text-3xl \${i < stars ? "text-yellow-400" : "text-gray-300"}\`}>
-              {'\u2B50'}
-            </span>
-          ))}
-        </div>
+      <div className="flex justify-center gap-2 mb-4">
+        {[...Array(3)].map((_, i) => (
+          <span key={i} className={`text-3xl ${i < stars ? "text-yellow-400" : "text-gray-300"}`}>
+            <span role="img" aria-label="star">★</span>
+          </span>
+        ))}
+      </div>
         <button
           onClick={handleExercise}
           className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full mb-4"
