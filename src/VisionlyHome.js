@@ -85,7 +85,7 @@ export default function VisionlyHome() {
         <h2 className="text-lg font-semibold mb-2">Exercises Completed</h2>
         <div className="flex justify-center gap-2 mb-4">
           {[...Array(3)].map((_, i) => (
-            <span className={`inline-block w-4 h-4 rounded-full ${i < stars ? 'bg-green-500' : 'bg-gray-300'}`}></span>
+            <span key={i} className={`w-4 h-4 rounded-full inline-block ${i < stars ? "bg-green-500" : "bg-gray-300"}`}></span>
           ))}
         </div>
         <button
