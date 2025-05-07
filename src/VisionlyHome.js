@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 
 const activities = ["Watching TV", "Playing Games", "Reading Books", "Outdoors"];
@@ -73,7 +72,9 @@ export default function VisionlyHome() {
 
   return (
     <div
-      className={\`min-h-screen p-4 flex flex-col items-center justify-center text-center transition-all duration-500 \${theme === "underwater" ? "bg-blue-200" : "bg-purple-900 text-white"}\`}
+      className={`min-h-screen p-4 flex flex-col items-center justify-center text-center transition-all duration-500 ${
+        theme === "underwater" ? "bg-blue-200" : "bg-purple-900 text-white"
+      }`}
     >
       <button
         onClick={toggleTheme}
@@ -88,8 +89,8 @@ export default function VisionlyHome() {
         <h2 className="text-lg font-semibold mb-2">Stars Earned</h2>
         <div className="flex justify-center gap-2 mb-4">
           {[...Array(3)].map((_, i) => (
-            <span key={i} className={\`text-3xl \${i < stars ? "text-yellow-400" : "text-gray-300"}\`}>
-              ⭐
+            <span key={i} className={`text-3xl ${i < stars ? "text-yellow-400" : "text-gray-300"}`}>
+              {"\u2B50"}
             </span>
           ))}
         </div>
