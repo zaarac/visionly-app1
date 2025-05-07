@@ -4,7 +4,6 @@ const activities = ["Watching TV", "Playing Games", "Reading Books", "Outdoors"]
 const feelings = ["Tired", "Sore", "Dry", "Fine"];
 
 export default function VisionlyHome() {
-  const [stars, setStars] = useState(0);
   const [logs, setLogs] = useState([]);
   const [theme, setTheme] = useState("underwater");
   const recognitionRef = useRef(null);
@@ -12,7 +11,6 @@ export default function VisionlyHome() {
 
   const handleExercise = () => {
     alert("Starting exercise...");
-    setStars((prev) => Math.min(prev + 1, 3));
   };
 
   const startVoiceRecognition = () => {
@@ -82,12 +80,6 @@ export default function VisionlyHome() {
       <h1 className="text-4xl font-bold mb-6">VISIONLY</h1>
 
       <div className="bg-white text-black p-4 rounded-2xl shadow-md w-72 mb-6">
-        <h2 className="text-lg font-semibold mb-2">Exercises Completed</h2>
-        <div className="flex justify-center gap-2 mb-4">
-          {[...Array(3)].map((_, i) => (
-            <span key={i} className={`w-4 h-4 rounded-full inline-block ${i < stars ? "bg-green-500" : "bg-gray-300"}`}></span>
-          ))}
-        </div>
         <button
           onClick={handleExercise}
           className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full mb-4"
