@@ -90,7 +90,7 @@ export default function VisionlyHome() {
         <div className="flex justify-center gap-2 mb-4">
           {[...Array(3)].map((_, i) => (
             <span key={i} className={`text-3xl ${i < stars ? "text-yellow-400" : "text-gray-300"}`}>
-              {"\u2B50"}
+              {'\u2B50'}
             </span>
           ))}
         </div>
