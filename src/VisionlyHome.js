@@ -68,7 +68,7 @@ export default function VisionlyHome() {
 
   return (
     <div
-      className={\`min-h-screen p-4 flex flex-col items-center justify-center text-center transition-all duration-500 \${theme === "underwater" ? "bg-blue-200" : "bg-purple-900 text-white"}\`}
+      className={`min-h-screen p-4 flex flex-col items-center justify-center text-center transition-all duration-500 ${theme === "underwater" ? "bg-blue-200" : "bg-purple-900 text-white"}`}
     >
       <button
         onClick={toggleTheme}
